@@ -1,16 +1,15 @@
 {
-  "name": "jira-issues",
+  "name": "alfred-jira",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Gary McAdam",
   "license": "ISC",
   "dependencies": {
     "alfy": "^0.9.1",
-    "dotenv": "^8.2.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
   }
