@@ -1,0 +1,18 @@
+{
+  "name": "jira-issues",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alfy": "^0.9.1",
+    "dotenv": "^8.2.0",
+    "mime-types": "^2.1.26",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
