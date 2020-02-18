@@ -1,4 +1,4 @@
-# Alfred JIRA Workflow
+# Alfred JIRA Issue List
 
 - 🔎 Quickly look-up tickets from your JIRA board
 - 📋 Copy JIRA ticket numbers
