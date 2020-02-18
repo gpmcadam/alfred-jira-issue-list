@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>bundleid</key>
+    <string>com.mcadam.gary.jira</string>
+    <key>category</key>
+    <string>Productivity</string>
+    <key>connections</key>
+    <dict>
+      <key>73CDEF91-C793-4E79-892A-BDDE73A3C32D</key>
+      <array>
+        <dict>
+          <key>destinationuid</key>
+          <string>2D40ED32-CAB0-4504-A60E-42F08348E334</string>
+          <key>modifiers</key>
+          <integer>0</integer>
+          <key>modifiersubtext</key>
+          <string/>
+          <key>vitoclose</key>
+          <false/>
+        </dict>
+      </array>
+    </dict>
+    <key>disabled</key>
+    <false/>
+    <key>objects</key>
+    <array>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>alfredfiltersresults</key>
+          <true/>
+          <key>alfredfiltersresultsmatchmode</key>
+          <integer>2</integer>
+          <key>argumenttreatemptyqueryasnil</key>
+          <true/>
+          <key>argumenttrimmode</key>
+          <integer>0</integer>
+          <key>argumenttype</key>
+          <integer>1</integer>
+          <key>escaping</key>
+          <integer>102</integer>
+          <key>keyword</key>
+          <string>jira</string>
+          <key>queuedelaycustom</key>
+          <integer>3</integer>
+          <key>queuedelayimmediatelyinitially</key>
+          <true/>
+          <key>queuedelaymode</key>
+          <integer>0</integer>
+          <key>queuemode</key>
+          <integer>1</integer>
+          <key>runningsubtext</key>
+          <string/>
+          <key>script</key>
+          <string>./node_modules/.bin/run-node index.js</string>
+          <key>scriptargtype</key>
+          <integer>1</integer>
+          <key>subtext</key>
+          <string/>
+          <key>title</key>
+          <string>JIRA</string>
+          <key>type</key>
+          <integer>0</integer>
+          <key>withspace</key>
+          <true/>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.input.scriptfilter</string>
+        <key>uid</key>
+        <string>73CDEF91-C793-4E79-892A-BDDE73A3C32D</string>
+        <key>version</key>
+        <integer>3</integer>
+      </dict>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>browser</key>
+          <string/>
+          <key>spaces</key>
+          <string/>
+          <key>url</key>
+          <string/>
+          <key>utf8</key>
+          <true/>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.action.openurl</string>
+        <key>uid</key>
+        <string>2D40ED32-CAB0-4504-A60E-42F08348E334</string>
+        <key>version</key>
+        <integer>1</integer>
+      </dict>
+    </array>
+    <key>readme</key>
+    <string># Alfred JIRA Issue List
+
+- Quickly look-up tickets from your JIRA board
+- Copy JIRA ticket numbers
+- Instantly open tickets in your browser
+
+## Configuartion
+
+Use the Workflow Environment Variables panel to configure the following:
+
+
+`RAPIDVIEWID`
+
+have a look in your board URL for this in the URL
+
+`PROJECT`
+
+Your Jira Project key
+
+
+`JIRA_URL`
+
+JIRA Base URL (without /)
+e.g. https://jira.company.com</string>
+    <key>uidata</key>
+    <dict>
+      <key>2D40ED32-CAB0-4504-A60E-42F08348E334</key>
+      <dict>
+        <key>xpos</key>
+        <integer>410</integer>
+        <key>ypos</key>
+        <integer>320</integer>
+      </dict>
+      <key>73CDEF91-C793-4E79-892A-BDDE73A3C32D</key>
+      <dict>
+        <key>xpos</key>
+        <integer>155</integer>
+        <key>ypos</key>
+        <integer>315</integer>
+      </dict>
+    </dict>
+    <key>variables</key>
+    <dict>
+      <key>JIRA_URL</key>
+      <string/>
+      <key>PROJECT</key>
+      <string/>
+      <key>RAPIDVIEWID</key>
+      <string/>
+    </dict>
+    <key>variablesdontexport</key>
+    <array>
+      <string>JIRA_URL</string>
+      <string>PROJECT</string>
+      <string>RAPIDVIEWID</string>
+    </array>
+    <key>name</key>
+    <string>JIRA Issue List</string>
+    <key>version</key>
+    <string>1.0.0</string>
+    <key>description</key>
+    <string>JIRA Issue List</string>
+    <key>webaddress</key>
+    <string>https://gary.mcad.am</string>
+    <key>createdby</key>
+    <string>Gary McAdam</string>
+  </dict>
+</plist>
