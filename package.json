@@ -1,16 +1,42 @@
 {
   "name": "alfred-jira",
   "version": "1.0.0",
-  "description": "",
+  "description": "JIRA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "lint": "eslint .",
+    "prettier": "prettier --check \"**/*.{js,json}\"",
+    "prettify": "prettier --write \"**/*.{js,json}\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
-  "author": "Gary McAdam",
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "author": {
+    "name": "Gary McAdam",
+    "email": "gary@mcad.am",
+    "url": "https://gary.mcad.am"
+  },
   "license": "ISC",
   "dependencies": {
     "alfy": "^0.9.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.7.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1"
   }
 }

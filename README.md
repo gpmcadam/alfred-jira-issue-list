@@ -6,6 +6,8 @@
 
 ## Setup
 
+> **NOTE** Ensure you're using Alfred v4 or later.
+
 1. Import the workflow
 2. ensure that the environment variables are set (click the ⒳ button in the workflow panel)
 
