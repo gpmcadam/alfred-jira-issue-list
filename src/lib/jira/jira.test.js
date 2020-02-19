@@ -1,6 +1,14 @@
 const { getIssues } = require('.');
 
-jest.mock('request-promise', () => jest.fn());
+jest.mock('request-promise', () =>
+  jest.fn(() =>
+    Promise.resolve({
+      issuesData: {
+        issues: []
+      }
+    })
+  )
+);
 
 const request = require('request-promise');
 
