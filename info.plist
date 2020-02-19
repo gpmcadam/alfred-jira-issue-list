@@ -117,7 +117,18 @@ Your Jira Project key
 `JIRA_URL`
 
 JIRA Base URL (without /)
-e.g. https://jira.company.com</string>
+e.g. https://jira.company.com
+
+`USE_ENTERPRISE_SSL`
+
+Leave empty to use normal SSL certs. Set to "1" to use your enterprise certs.
+
+Customise the locations of your CA, CERT and KEY paths using additional variables:
+
+ - `CA_PATH`
+ - `CERT_PATH`
+ - `KEY_PATH`
+</string>
     <key>uidata</key>
     <dict>
       <key>2D40ED32-CAB0-4504-A60E-42F08348E334</key>
@@ -143,22 +154,17 @@ e.g. https://jira.company.com</string>
       <string/>
       <key>RAPIDVIEWID</key>
       <string/>
+      <key>USE_ENTERPRISE_SSL</key>
+      <string/>
     </dict>
     <key>variablesdontexport</key>
     <array>
       <string>JIRA_URL</string>
       <string>PROJECT</string>
       <string>RAPIDVIEWID</string>
+      <string>USE_ENTERPRISE_SSL</string>
     </array>
     <key>name</key>
     <string>JIRA Issue List</string>
-    <key>version</key>
-    <string>1.0.0</string>
-    <key>description</key>
-    <string>JIRA Issue List</string>
-    <key>webaddress</key>
-    <string>https://gary.mcad.am</string>
-    <key>createdby</key>
-    <string>Gary McAdam</string>
   </dict>
 </plist>
