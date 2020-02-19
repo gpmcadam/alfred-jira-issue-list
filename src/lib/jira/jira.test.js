@@ -1,4 +1,4 @@
-const jira = require('.');
+const { getIssues } = require('.');
 
 jest.mock('request-promise', () => jest.fn());
 
@@ -12,7 +12,7 @@ test('makes a request for jira issues', async () => {
     foo: 'bar'
   };
 
-  await jira({ jiraUrl, rapidViewId, project, options });
+  await getIssues({ jiraUrl, rapidViewId, project, options });
 
   const uri = `${jiraUrl}/rest/greenhopper/1.0/xboard/work/allData.json?rapidViewId=${rapidViewId}&selectedProjectKey=${project}`;
 
