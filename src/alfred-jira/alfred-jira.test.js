@@ -12,7 +12,8 @@ jest.mock('../lib/jira', () => ({
       {
         key: 'foo',
         statusName: 'bar',
-        summary: 'baz'
+        summary: 'baz',
+        assignee: 'qux'
       }
     ])
 }));
@@ -42,7 +43,7 @@ test('the app gives back alfred-compatible results', async () => {
     {
       title: 'foo',
       subtitle: 'bar | baz',
-      match: 'foo bar baz',
+      match: 'foo bar baz qux',
       text: {
         copy: 'foo',
         largetype: 'foo'

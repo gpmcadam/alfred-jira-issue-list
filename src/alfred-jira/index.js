@@ -9,15 +9,15 @@ const required = args => {
   });
 };
 
-module.exports = async ({ project, rapidViewId, jiraUrl } = {}) => {
+module.exports = async ({ project, rapidViewId, jiraUrl, apiUser, apiKey } = {}) => {
   required({ project, rapidViewId, jiraUrl });
 
-  const issues = await getIssues({ project, rapidViewId, jiraUrl, options: certOptions });
+  const issues = await getIssues({ project, rapidViewId, jiraUrl, apiUser, apiKey, options: certOptions });
 
-  return issues.map(({ key, statusName, summary }) => ({
+  return issues.map(({ key, statusName, summary, assignee }) => ({
     title: key,
     subtitle: `${statusName} | ${summary}`,
-    match: `${key} ${statusName} ${summary}`,
+    match: `${key} ${statusName} ${summary} ${assignee}`,
     text: {
       copy: key,
       largetype: key
