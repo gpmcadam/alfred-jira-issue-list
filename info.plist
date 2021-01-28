@@ -22,8 +22,14 @@
         </dict>
       </array>
     </dict>
+    <key>createdby</key>
+    <string>Gary McAdam</string>
+    <key>description</key>
+    <string>JIRA</string>
     <key>disabled</key>
     <false/>
+    <key>name</key>
+    <string>JIRA Issue List</string>
     <key>objects</key>
     <array>
       <dict>
@@ -57,6 +63,8 @@
           <string>./node_modules/.bin/run-node index.js</string>
           <key>scriptargtype</key>
           <integer>1</integer>
+          <key>scriptfile</key>
+          <string/>
           <key>subtext</key>
           <string/>
           <key>title</key>
@@ -119,6 +127,16 @@ Your Jira Project key
 JIRA Base URL (without /)
 e.g. https://jira.company.com
 
+`API_KEY`
+
+Your personal API key used to access Jira.
+
+See: https://id.atlassian.com/manage-profile/security/api-tokens
+
+`API_USER`
+
+The user/email you use to log in to Jira with
+
 `USE_ENTERPRISE_SSL`
 
 Leave empty to use normal SSL certs. Set to "1" to use your enterprise certs.
@@ -127,8 +145,7 @@ Customise the locations of your CA, CERT and KEY paths using additional variable
 
  - `CA_PATH`
  - `CERT_PATH`
- - `KEY_PATH`
-</string>
+ - `KEY_PATH`</string>
     <key>uidata</key>
     <dict>
       <key>2D40ED32-CAB0-4504-A60E-42F08348E334</key>
@@ -148,23 +165,31 @@ Customise the locations of your CA, CERT and KEY paths using additional variable
     </dict>
     <key>variables</key>
     <dict>
+      <key>API_KEY</key>
+      <string />
+      <key>API_USER</key>
+      <string />
       <key>JIRA_URL</key>
-      <string/>
+      <string />
       <key>PROJECT</key>
-      <string/>
+      <string />
       <key>RAPIDVIEWID</key>
-      <string/>
+      <string />
       <key>USE_ENTERPRISE_SSL</key>
       <string/>
     </dict>
     <key>variablesdontexport</key>
     <array>
-      <string>JIRA_URL</string>
-      <string>PROJECT</string>
       <string>RAPIDVIEWID</string>
+      <string>API_KEY</string>
+      <string>API_USER</string>
       <string>USE_ENTERPRISE_SSL</string>
+      <string>PROJECT</string>
+      <string>JIRA_URL</string>
     </array>
-    <key>name</key>
-    <string>JIRA Issue List</string>
+    <key>version</key>
+    <string>1.1.0</string>
+    <key>webaddress</key>
+    <string>https://gary.mcad.am</string>
   </dict>
 </plist>
