@@ -1,43 +1,10 @@
-const alfredJira = require('.');
+import nock from 'nock';
 
-const requiredParams = {
-  rapidViewId: 'foo',
-  jiraUrl: 'https://example.org',
-  project: 'project'
-};
+import alfredJira from '.';
 
-jest.mock('../lib/jira', () => ({
-  getIssues: () =>
-    Promise.resolve([
-      {
-        key: 'foo',
-        statusName: 'bar',
-        summary: 'baz',
-        assignee: '124',
-        assigneeName: 'qux'
-      }
-    ])
-}));
-
-test('the app throws an exception when a required param is missing', async () => {
-  for (const key in Object.keys(requiredParams)) {
-    try {
-      await alfredJira({
-        ...requiredParams,
-        [key]: undefined
-      });
-    } catch (e) {
-      expect(e.message).toContain('Missing');
-      expect(e.message).toContain(key);
-    }
-  }
-
-  try {
-    await alfredJira();
-  } catch (e) {
-    expect(e.message).toContain('Missing');
-  }
-});
+const project = 'project';
+const rapidViewId = 'foo';
+const jiraUrl = 'https://example.org';
 
 test('the app gives back alfred-compatible results', async () => {
   const expected = [
@@ -47,11 +14,32 @@ test('the app gives back alfred-compatible results', async () => {
       match: 'foo bar baz qux',
       text: {
         copy: 'foo',
-        largetype: 'foo'
+        largetype: 'foo',
       },
-      arg: `${requiredParams.jiraUrl}/browse/foo`
-    }
+      arg: `https://example.org/browse/foo`,
+    },
   ];
-  const res = await alfredJira(requiredParams);
+
+  nock(jiraUrl)
+    .get(`/rest/greenhopper/1.0/xboard/work/allData.json?rapidViewId=${rapidViewId}&selectedProjectKey=${project}`)
+    .reply(200, {
+      issuesData: {
+        issues: [
+          {
+            key: 'foo',
+            statusName: 'bar',
+            summary: 'baz',
+            assignee: '124',
+            assigneeName: 'qux',
+          },
+        ],
+      },
+    });
+
+  const res = await alfredJira({
+    rapidViewId,
+    jiraUrl,
+    project,
+  });
   expect(res).toEqual(expected);
 });

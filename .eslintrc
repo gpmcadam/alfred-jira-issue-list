@@ -1,6 +1,9 @@
 {
     "extends": "eslint:recommended",
     "plugins": ["jest"],
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "rules": {
       "jest/no-disabled-tests": "warn",
       "jest/no-focused-tests": "error",
