@@ -13,7 +13,8 @@ jest.mock('../lib/jira', () => ({
         key: 'foo',
         statusName: 'bar',
         summary: 'baz',
-        assignee: 'qux'
+        assignee: '124',
+        assigneeName: 'qux'
       }
     ])
 }));
