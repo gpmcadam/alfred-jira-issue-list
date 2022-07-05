@@ -1,3 +1,3 @@
-const workflow = require('./src/workflow');
+import workflow from './src/workflow/index.js';
 
 workflow();

@@ -1,34 +1,23 @@
-const { getIssues } = require('.');
+import nock from 'nock';
 
-jest.mock('request-promise', () =>
-  jest.fn(() =>
-    Promise.resolve({
-      issuesData: {
-        issues: []
-      }
-    })
-  )
-);
-
-const request = require('request-promise');
+import { getIssues } from '.';
 
 test('makes a request for jira issues', async () => {
   const jiraUrl = 'https://example.org';
   const rapidViewId = '123';
   const project = 'proj';
-  const options = {
-    foo: 'bar'
-  };
 
-  await getIssues({ jiraUrl, rapidViewId, project, options });
+  nock(jiraUrl)
+    .get(`/rest/greenhopper/1.0/xboard/work/allData.json?rapidViewId=${rapidViewId}&selectedProjectKey=${project}`)
+    .reply(200, {
+      issuesData: {
+        issues: [{ foo: 'bar' }],
+      },
+    });
 
-  const uri = `${jiraUrl}/rest/greenhopper/1.0/xboard/work/allData.json?rapidViewId=${rapidViewId}&selectedProjectKey=${project}`;
+  const issues = await getIssues({ jiraUrl, rapidViewId, project });
 
-  expect(request).toBeCalledWith({
-    uri,
-    foo: 'bar',
-    json: true
-  });
+  expect(issues).toEqual([{ foo: 'bar' }]);
 });
 
 test('uses api user and key if given', async () => {
@@ -37,21 +26,19 @@ test('uses api user and key if given', async () => {
   const project = 'proj';
   const apiUser = 'user';
   const apiKey = 'abcdef';
-  const options = {
-    foo: 'bar'
-  };
-
-  await getIssues({ jiraUrl, rapidViewId, project, apiUser, apiKey, options });
-
-  const uri = `${jiraUrl}/rest/greenhopper/1.0/xboard/work/allData.json?rapidViewId=${rapidViewId}&selectedProjectKey=${project}`;
 
   const auth = Buffer.from(`${apiUser}:${apiKey}`).toString('base64');
-  expect(request).toBeCalledWith({
-    uri,
-    foo: 'bar',
-    json: true,
-    headers: {
-      authorization: `Basic ${auth}`
-    }
-  });
+  nock(jiraUrl, {
+    reqheaders: { authorization: `Basic ${auth}` },
+  })
+    .get(`/rest/greenhopper/1.0/xboard/work/allData.json?rapidViewId=${rapidViewId}&selectedProjectKey=${project}`)
+    .reply(200, {
+      issuesData: {
+        issues: [{ foo: 'bar' }],
+      },
+    });
+
+  const issues = await getIssues({ jiraUrl, rapidViewId, project, apiUser, apiKey });
+
+  expect(issues).toEqual([{ foo: 'bar' }]);
 });

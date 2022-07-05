@@ -1,17 +1,7 @@
-const { getIssues } = require('../lib/jira');
-const certOptions = require('../lib/fetch-with-certs');
+import { getIssues } from '../lib/jira/index.js';
+import certOptions from '../lib/fetch-with-certs/index.js';
 
-const required = args => {
-  Object.entries(args).map(([name, val]) => {
-    if (!val) {
-      throw new Error(`Missing required argument for app: ${name}`);
-    }
-  });
-};
-
-module.exports = async ({ project, rapidViewId, jiraUrl, apiUser, apiKey } = {}) => {
-  required({ project, rapidViewId, jiraUrl });
-
+export default async ({ project, rapidViewId, jiraUrl, apiUser, apiKey }) => {
   const issues = await getIssues({ project, rapidViewId, jiraUrl, apiUser, apiKey, options: certOptions });
 
   return issues.map(({ key, statusName, summary, assigneeName }) => ({
@@ -20,8 +10,8 @@ module.exports = async ({ project, rapidViewId, jiraUrl, apiUser, apiKey } = {})
     match: `${key} ${statusName} ${summary} ${assigneeName}`,
     text: {
       copy: key,
-      largetype: key
+      largetype: key,
     },
-    arg: `${jiraUrl}/browse/${key}`
+    arg: `${jiraUrl}/browse/${key}`,
   }));
 };
