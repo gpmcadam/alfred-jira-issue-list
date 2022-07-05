@@ -15,7 +15,7 @@
 
 - Within alfred, use the `JIRA` keyword to bring up results
 - Filter results by key, status or description
-- Cmd-V to copy the highlighted issue key
+- Cmd-C to copy the highlighted issue key
 - Enter to open the issue in the browser
 
 ## Troubleshooting

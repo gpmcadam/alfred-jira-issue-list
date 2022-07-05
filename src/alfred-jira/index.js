@@ -14,10 +14,10 @@ module.exports = async ({ project, rapidViewId, jiraUrl, apiUser, apiKey } = {})
 
   const issues = await getIssues({ project, rapidViewId, jiraUrl, apiUser, apiKey, options: certOptions });
 
-  return issues.map(({ key, statusName, summary, assignee }) => ({
+  return issues.map(({ key, statusName, summary, assigneeName }) => ({
     title: key,
     subtitle: `${statusName} | ${summary}`,
-    match: `${key} ${statusName} ${summary} ${assignee}`,
+    match: `${key} ${statusName} ${summary} ${assigneeName}`,
     text: {
       copy: key,
       largetype: key
