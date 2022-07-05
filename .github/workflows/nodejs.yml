@@ -16,8 +16,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: mkdir -p Library/Application Support/Alfred
-      - run: touch Library/Application Support/Alfred/prefs.json
+      - run: mkdir -p "./Library/Application Support/Alfred"
+      - run: touch "Library/Application Support/Alfred/prefs.json"
+      - run: echo '{}' > "Library/Application Support/Alfred/prefs.json"
+      - run: cat "Library/Application Support/Alfred/prefs.json"
       - run: npm install
       - run: npm run build --if-present
       - run: npm run lint
