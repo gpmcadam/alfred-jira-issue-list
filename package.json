@@ -1,7 +1,7 @@
 {
   "name": "alfred-jira-issue-list",
   "type": "module",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "JIRA",
   "main": "index.js",
   "scripts": {
