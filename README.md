@@ -6,10 +6,10 @@
 
 ## Setup
 
-> **NOTE** Ensure you're using Alfred v4 or later and that Alfred has access to a version of Node (>=12)
+> **NOTE** Ensure you're using Alfred v5 or later and that Alfred has access to a version of Node (>=12)
 
 1. Install the workflow from npm: `npm install --global alfred-jira-issue-list`
-2. Configure the workflow variables in 'Workflows' -> 'Workflow Issue List' -> ⒳
+2. Configure the workflow 'Workflows' -> 'JIRA Issue List' -> 'Configure Workflow'
 
 ## Running
 

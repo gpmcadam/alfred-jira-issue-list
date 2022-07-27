@@ -1,195 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>bundleid</key>
-    <string>com.mcadam.gary.jira</string>
-    <key>category</key>
-    <string>Productivity</string>
-    <key>connections</key>
-    <dict>
-      <key>73CDEF91-C793-4E79-892A-BDDE73A3C32D</key>
-      <array>
-        <dict>
-          <key>destinationuid</key>
-          <string>2D40ED32-CAB0-4504-A60E-42F08348E334</string>
-          <key>modifiers</key>
-          <integer>0</integer>
-          <key>modifiersubtext</key>
-          <string/>
-          <key>vitoclose</key>
-          <false/>
-        </dict>
-      </array>
-    </dict>
-    <key>createdby</key>
-    <string>Gary McAdam</string>
-    <key>description</key>
-    <string>JIRA</string>
-    <key>disabled</key>
-    <false/>
-    <key>name</key>
-    <string>JIRA Issue List</string>
-    <key>objects</key>
-    <array>
-      <dict>
-        <key>config</key>
-        <dict>
-          <key>alfredfiltersresults</key>
-          <true/>
-          <key>alfredfiltersresultsmatchmode</key>
-          <integer>2</integer>
-          <key>argumenttreatemptyqueryasnil</key>
-          <true/>
-          <key>argumenttrimmode</key>
-          <integer>0</integer>
-          <key>argumenttype</key>
-          <integer>1</integer>
-          <key>escaping</key>
-          <integer>102</integer>
-          <key>keyword</key>
-          <string>jira</string>
-          <key>queuedelaycustom</key>
-          <integer>3</integer>
-          <key>queuedelayimmediatelyinitially</key>
-          <true/>
-          <key>queuedelaymode</key>
-          <integer>0</integer>
-          <key>queuemode</key>
-          <integer>1</integer>
-          <key>runningsubtext</key>
-          <string/>
-          <key>script</key>
-          <string>./node_modules/.bin/run-node index.js</string>
-          <key>scriptargtype</key>
-          <integer>1</integer>
-          <key>scriptfile</key>
-          <string/>
-          <key>subtext</key>
-          <string/>
-          <key>title</key>
-          <string>JIRA</string>
-          <key>type</key>
-          <integer>0</integer>
-          <key>withspace</key>
-          <true/>
-        </dict>
-        <key>type</key>
-        <string>alfred.workflow.input.scriptfilter</string>
-        <key>uid</key>
-        <string>73CDEF91-C793-4E79-892A-BDDE73A3C32D</string>
-        <key>version</key>
-        <integer>3</integer>
-      </dict>
-      <dict>
-        <key>config</key>
-        <dict>
-          <key>browser</key>
-          <string/>
-          <key>spaces</key>
-          <string/>
-          <key>url</key>
-          <string/>
-          <key>utf8</key>
-          <true/>
-        </dict>
-        <key>type</key>
-        <string>alfred.workflow.action.openurl</string>
-        <key>uid</key>
-        <string>2D40ED32-CAB0-4504-A60E-42F08348E334</string>
-        <key>version</key>
-        <integer>1</integer>
-      </dict>
-    </array>
-    <key>readme</key>
-    <string># Alfred JIRA Issue List
+<dict>
+	<key>bundleid</key>
+	<string>com.mcadam.gary.jira</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>73CDEF91-C793-4E79-892A-BDDE73A3C32D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D40ED32-CAB0-4504-A60E-42F08348E334</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Gary McAdam</string>
+	<key>description</key>
+	<string>JIRA</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>JIRA Issue List</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>jira</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>JIRA</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>73CDEF91-C793-4E79-892A-BDDE73A3C32D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2D40ED32-CAB0-4504-A60E-42F08348E334</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Alfred JIRA Issue List
 
 - Quickly look-up tickets from your JIRA board
 - Copy JIRA ticket numbers
-- Instantly open tickets in your browser
+- Instantly open tickets in your browser</string>
+	<key>uidata</key>
+	<dict>
+		<key>2D40ED32-CAB0-4504-A60E-42F08348E334</key>
+		<dict>
+			<key>xpos</key>
+			<real>410</real>
+			<key>ypos</key>
+			<real>320</real>
+		</dict>
+		<key>73CDEF91-C793-4E79-892A-BDDE73A3C32D</key>
+		<dict>
+			<key>xpos</key>
+			<real>155</real>
+			<key>ypos</key>
+			<real>315</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Your personal API key. Generate this from: https://id.atlassian.com/manage-profile/security/api-tokens</string>
+			<key>label</key>
+			<string>API Key</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>API_KEY</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The user/email you use to login to Jira with</string>
+			<key>label</key>
+			<string>API User</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>API_USER</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>JIRA Base URL (without /)
+e.g. https://jira.company.com</string>
+			<key>label</key>
+			<string>Jira URL</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>JIRA_URL</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Your Jira Project key (see board URL, e.g. software/c/projects/ABC/boards/...) where ABC is the project key</string>
+			<key>label</key>
+			<string>Project</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>PROJECT</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Have a look in your board URL, it's a numeric value after `boards/`</string>
+			<key>label</key>
+			<string>Rapid View ID</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>RAPIDVIEWID</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Enabled</string>
+			</dict>
+			<key>description</key>
+			<string>Whether to use enterprise certificates to sign the request.
 
-## Configuartion
-
-Use the Workflow Environment Variables panel to configure the following:
-
-
-`RAPIDVIEWID`
-
-have a look in your board URL for this in the URL
-
-`PROJECT`
-
-Your Jira Project key
-
-
-`JIRA_URL`
-
-JIRA Base URL (without /)
-e.g. https://jira.company.com
-
-`API_KEY`
-
-Your personal API key used to access Jira.
-
-See: https://id.atlassian.com/manage-profile/security/api-tokens
-
-`API_USER`
-
-The user/email you use to log in to Jira with
-
-`USE_ENTERPRISE_SSL`
-
-Leave empty to use normal SSL certs. Set to "1" to use your enterprise certs.
-
-Customise the locations of your CA, CERT and KEY paths using additional variables:
-
- - `CA_PATH`
- - `CERT_PATH`
- - `KEY_PATH`</string>
-    <key>uidata</key>
-    <dict>
-      <key>2D40ED32-CAB0-4504-A60E-42F08348E334</key>
-      <dict>
-        <key>xpos</key>
-        <integer>410</integer>
-        <key>ypos</key>
-        <integer>320</integer>
-      </dict>
-      <key>73CDEF91-C793-4E79-892A-BDDE73A3C32D</key>
-      <dict>
-        <key>xpos</key>
-        <integer>155</integer>
-        <key>ypos</key>
-        <integer>315</integer>
-      </dict>
-    </dict>
-    <key>variables</key>
-    <dict>
-      <key>API_KEY</key>
-      <string />
-      <key>API_USER</key>
-      <string />
-      <key>JIRA_URL</key>
-      <string />
-      <key>PROJECT</key>
-      <string />
-      <key>RAPIDVIEWID</key>
-      <string />
-      <key>USE_ENTERPRISE_SSL</key>
-      <string/>
-    </dict>
-    <key>variablesdontexport</key>
-    <array>
-      <string>RAPIDVIEWID</string>
-      <string>API_KEY</string>
-      <string>API_USER</string>
-      <string>USE_ENTERPRISE_SSL</string>
-      <string>PROJECT</string>
-      <string>JIRA_URL</string>
-    </array>
-    <key>version</key>
-    <string>1.3.2</string>
-    <key>webaddress</key>
-    <string>https://gary.mcad.am</string>
-  </dict>
+Customise the locations of your CA, CERT and KEY paths using additional variables: CA Path, Cert Path and Key Path</string>
+			<key>label</key>
+			<string>Use Enterprise SSL?</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>USE_ENTERPRISE_SSL</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>CA Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>CA_PATH</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Cert Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>CERT_PATH</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Key Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>KEY_PATH</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>2.0.0</string>
+	<key>webaddress</key>
+	<string>https://gary.mcad.am</string>
+</dict>
 </plist>
